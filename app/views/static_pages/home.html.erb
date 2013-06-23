@@ -1,2 +1,21 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<%# provide(:some_html, 'This space intentionally left blank.') %>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Address Manipulator Demo</title>
+  </head>
+  <body>
+
+    <h1>Address Manipulator Demo</h1>
+
+	<p>Find me in app/views/static_pages/home.html.erb</p>
+
+	<p>Injection point: (<%= @some_html %>)</p>
+
+<%= button_to "delete", :controller => :static_pages, 
+                           :action => 'home',
+                           :method => :get %>
+
+  </body>
+</html>
