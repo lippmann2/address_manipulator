@@ -1,1 +1,1 @@
-This is a simple smoke test to live-load a mailing address from the NYC Open Data API and parse and display it using Rails.
+This is a simple smoke test to live-load a mailing address from the NYC Open Data API, parse the JSON, and display it using Rails.

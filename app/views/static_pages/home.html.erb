@@ -3,28 +3,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Address Manipulator Demo</title>
+    <title>Address Manipulator</title>
   </head>
+  <style type="text/css">
+	body { font-size:18px; }
+	.wrapper { max-width: 600px; margin:0 auto; }
+  </style>
   <body>
+  	<div class="wrapper">
+	    <h1>Address Manipulator</h1>
 
-    <h1>Address Manipulator Demo</h1>
+		<p>This is a simple smoke test by Mark Lippmann to load some remote JSON data from an API and serve it on Rails. The data comes from the <a href="https://nycopendata.socrata.com/">NYC Open Data</a> API.</p>
 
-	<p>Find me in app/views/static_pages/home.html.erb</p>
+		<p>The code is available in <a href="https://github.com/lippmann2/address_manipulator">Mark's public GitHub respository</a>.</p>
 
-	<p>This is a simple smoke test by Mark Lippmann to load some remote JSON data from an API and serve it on Rails.</p>
-
-	<p>The code is available in Mark's public GitHub respository.</p>
-
-	<p>Injection point: (<%= @some_html %>)</p>
-
-<%= button_to "delete", :controller => :static_pages, 
-                           :action => 'home',
-                           :method => :get %>
-
-<%= form_for like=true, :html => { :method => :delete },
-                     :remote => true do |f| %>
-    <%= f.submit "Unlike" %>
-  <% end %>
-
+		<p>The address, "<%= "#{@street_address}, #{@zip_code}"%>," was loaded from the NYC Open Data <a href="https://nycopendata.socrata.com/Housing-Development/Building-Permits/">Incidents grouped by Address and Zip based on 311 Service Requests from 2010 to Present</a>.</p>
+	</div>
   </body>
 </html>
